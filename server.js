@@ -1,8 +1,6 @@
-let express = require("express");
-
-let PORT = process.env.PORT || 3000;
-
-let app = express();
+var express = require("express");
+var PORT = process.env.PORT || 3000;
+var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public")); // static files are in "public" folder
@@ -12,7 +10,7 @@ app.use(express.urlencoded({ extended: true })); // allowing express to encode a
 app.use(express.json()); // allowing express to encode and parse for me
 
 // Set Handlebars.
-let exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" })); // engine generates the view... this case is handlebars
 app.set("view engine", "handlebars");
