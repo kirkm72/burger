@@ -1,7 +1,6 @@
-ul {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body {
+  background-image: url("../images/topographic.png");
+  background-repeat: repeat;
 }
 
 .label {
