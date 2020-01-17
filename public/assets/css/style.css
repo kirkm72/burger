@@ -5,17 +5,3 @@ body {
     font-size: 15px;
     color: white
 }
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: white
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
