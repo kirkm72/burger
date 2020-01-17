@@ -1,6 +1,9 @@
 body {
   background-image: url("../images/topographic.png");
   background-repeat: repeat;
+  font-family: 'Audiowide', cursive;
+    font-size: 15px;
+    color: white
 }
 
 .label {
@@ -10,7 +13,7 @@ body {
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  background: white
 }
 
 .form-group {
