@@ -1,38 +1,41 @@
-<h1>Cats!</h1>
+<div class="container">
+    <h1 class="text-center">Burgertime!</h1>
+  
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Non-devoured burgers</h2>
+            <ol>
+            {{#each burger}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+            </ol>
+        </div>
+        <div class="col-md-6">
+            <h2>Devoured burgers!</h2>
 
-<h2>Cats that are not sleepy!</h2>
+            <ol>
+            {{#each burger}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+            {{/each}}
+            </ol>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <form class="create-form">
 
-<ul>
-  {{#each cats}} // start of handlebars for loop
-    {{#unless sleepy}} // handlebars inverse of "if" statement... if false
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}} // end of handlebars for loop
-</ul>
+            <div class="form-group">
+                <label for="burger-name">Burger Name:</label>
+                <input type="text" id="burger-name" name="name">
+            </div>
 
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}} // if true
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
+            <button class="btn btn-primary" type="submit">Add Burger</button>
+            <p>Enter a burger you're hungry for, then Click Add Burger.</p>
+            </form>
+        </div>
+    </div>
+</div>
