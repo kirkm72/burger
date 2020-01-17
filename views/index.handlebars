@@ -4,37 +4,60 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Non-devoured burgers</h2>
-            <ol>
+            {{!-- <ol>
             {{#each burger}}
                 {{#unless devoured}}
                 {{> burgers/burger-block devoured=true}}
                 {{/unless}}
             {{/each}}
-            </ol>
+            </ol> --}}
+             <ul>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                    <li>
+                        {{this.burgerName}}
+                        <form>
+                        <input type="hidden" name="devoured" value="false">
+                        <button class="btn btn-primary devourIt change-devoured" data-id={{this.id}}>Devour It!</button>
+                        </form> 
+                    </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
         </div>
         <div class="col-md-6">
-            <h2>Devoured burgers!</h2>
+            <h2>Devoured burgers</h2>
 
-            <ol>
+            {{!-- <ol>
             {{#each burger}}
                 {{#if devoured}}
                 {{> burgers/burger-block devoured=false}}
                 {{/if}}
             {{/each}}
-            </ol>
+            </ol> --}}
+            <ul>		
+			  {{#each burgers}}
+			    {{#if this.devoured}}
+			      <li>
+			        {{this.burgerName}}
+					<button class="btn btn-primary deleteIt" data-id={{this.id}}>Delete It!</button>
+			      </li>
+			    {{/if}}
+			  {{/each}}
+			  </ul>
         </div>    
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
-            <form class="create-form">
+            <form id="createForm" class="create-form">
 
             <div class="form-group">
                 <label for="burger-name">Burger Name:</label>
-                <input type="text" id="burger-name" name="name">
+                <input type="text" id="burger-name" name="burgerName">
             </div>
 
-            <button class="btn btn-primary" type="submit">Add Burger</button>
-            <p>Enter a burger you're hungry for, then Click Add Burger.</p>
+            <button id="createButton" class="btn btn-primary" type="submit">Add Burger</button>
+            <p>Enter a burger you're hungry for, then click "Add Burger" button.</p>
             </form>
         </div>
     </div>
