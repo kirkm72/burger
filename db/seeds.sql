@@ -1,5 +1,5 @@
-INSERT INTO burgers (name) VALUES ('Single meat');
-INSERT INTO burgers (name) VALUES ('Double meat');
-INSERT INTO burgers (name, eaten) VALUES ('Double meat cheeseburger', true);
-INSERT INTO burgers (name, eaten) VALUES ('Baconburger', true);
-INSERT INTO burgers (name, eaten) VALUES ('Chicken Sandwich', true);
+INSERT INTO burgers (burgerName, devoured) VALUES ('Single meat', true);
+INSERT INTO burgers (burgerName, devoured) VALUES ('Double meat', true);
+INSERT INTO burgers (burgerName, devoured) VALUES ('Double meat cheeseburger', false);
+INSERT INTO burgers (burgerName, devoured) VALUES ('Baconburger', false);
+INSERT INTO burgers (burgerName, devoured) VALUES ('Chicken Sandwich', false);
