@@ -1,0 +1,15 @@
+{{#if devoured}}
+    <li style="margin-bottom: 3px;">
+        {{burgerName}}
+        <button class="change-devoured btn btn-primary" data-id="{{id}}" data-newdevoured="{{devoured}}">
+            Devour!
+        </button>
+    </li>
+{{else}}
+    <li style="margin-bottom: 3px; ">
+        {{burgerName}}
+        <button class="change-devoured btn btn-primary" data-id="{{id}}" data-newdevoured="{{devoured}}" disabled>
+            Devoured.
+        </button>
+    </li>
+{{/if}}
