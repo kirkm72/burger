@@ -1,6 +1,4 @@
-DROP DATABASE IF EXISTS burgerDB;
-CREATE DATABASE burgerDB;
-USE burgerDB;
+USE cm35doablht8uy19;
 
 CREATE TABLE burgers
 (
