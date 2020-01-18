@@ -10,7 +10,7 @@ if(process.env.JAWSDB_URL){ // Heroku's JAWS DB
   password: "",
   database: "burgerDB"
 });
-
+}
 connection.connect(function(err) { //initiate connection
   if (err) {
     console.error("error connecting: " + err.stack);
