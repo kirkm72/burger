@@ -4,13 +4,6 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Non-devoured burgers</h2>
-            {{!-- <ol>
-            {{#each burger}}
-                {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
-                {{/unless}}
-            {{/each}}
-            </ol> --}}
              <ul>
                 {{#each burgers}}
                     {{#unless this.devoured}}
@@ -27,14 +20,6 @@
         </div>
         <div class="col-md-6">
             <h2>Devoured burgers</h2>
-
-            {{!-- <ol>
-            {{#each burger}}
-                {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
-                {{/if}}
-            {{/each}}
-            </ol> --}}
             <ul>		
 			  {{#each burgers}}
 			    {{#if this.devoured}}
